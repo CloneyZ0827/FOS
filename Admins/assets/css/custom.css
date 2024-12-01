@@ -1,0 +1,156 @@
+.select2-container .select2-selection--single{
+    height: 38px !important;
+}
+.select2-container--default .select2-container--single .select2-container__rendered{
+    line-height: 38px !important;
+}
+.select2-container--default .select2-container--single .select2-container__arrow{
+    height: 38px !important;
+}
+.img-square {
+    width: 100%;          /* Full width within its container */
+    height: 200px;        /* Set fixed height to make it square */
+    object-fit: cover;    /* Crop and center the image within the square */
+    object-position: center;  /* Center the image */
+    border-radius: 8px;   /* Optional: rounded corners */
+}
+.quantityInput{
+    width: 50px !important;
+    padding: 6px 3px;
+    text-align: center;
+    border: 1px solid #3a3a3a;
+    outline: 0;
+    margin-right: 1px;
+}
+
+#tableNoSelect {
+    font-size: 14px;  /* Adjusts the font size */
+    width: 150px;     /* Adjusts the width */
+}
+
+/* Make the table header fixed at the top */
+.table-wrapper {
+    overflow-y: auto; /* Enable scrolling if the table overflows */
+    max-height: 300px; /* Set the height of the table */
+    position: relative;
+}
+
+/* Make the table fixed with a header that remains at the top */
+.table {
+    width: 100%; 
+    border-collapse: collapse; /* Remove space between cells */
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* White background for the header */
+    z-index: 1; /* Ensure the header stays on top of other content */
+}
+
+/* Styling for table cells and ensuring column widths */
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; /* Ensure long text wraps within the cell */
+}
+
+.table th {
+    font-weight: bold;
+    background-color: #f1f1f1; /* Light grey background for headers */
+}
+
+/* Fixed column widths */
+.table td {
+    max-width: 150px;
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add "..." when content overflows */
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+}
+
+/* Styling the quantity buttons */
+.table .quantity-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none;
+    color: gray; /* Adjust if needed */
+    opacity: 0.6;
+}
+
+
+.payment-method-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-method-option {
+    display: flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-method-option:hover {
+    background-color: #5a5a5a;
+}
+
+.payment-method-radio {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #d8bc97;
+    margin-right: 15px;
+    position: relative;
+}
+
+.radio-circle {
+    width: 18px;
+    height: 18px;
+    background-color: #3a3a3a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+/* When radio button is selected, change color of circle */
+input[type="radio"]:checked + label .radio-circle {
+    background-color: #d8bc97;
+}
+
+.payment-method-label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+}
+
+.method-icon {
+    margin-left: auto;
+    margin-right: 10px; /* Add space between label text and icon */
+}
+
+.payment-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px; /* This adds the rounded corners */
+    object-fit: cover;
+}
+
+/* Hide the default radio button */
+input[type="radio"] {
+    display: none;
+}
+
